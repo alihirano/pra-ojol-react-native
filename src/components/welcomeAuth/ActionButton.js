@@ -4,9 +4,9 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import {color} from '../../utils/style-color';
 import {Button} from '../ui/Button';
 
-const ActionButton = ({label, text}) => {
+const ActionButton = ({label, text, onPress}) => {
   return (
-    <View style={{marginBottom: 43, maxWidth: 225}}>
+    <View style={{marginBottom: 43, minWidth: 225}}>
       <Text
         style={{
           fontSize: 10,
@@ -18,7 +18,7 @@ const ActionButton = ({label, text}) => {
         }}>
         {label}
       </Text>
-      <Button text={text} />
+      <Button text={text} onPress={onPress} />
     </View>
   );
 };

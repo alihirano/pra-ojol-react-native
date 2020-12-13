@@ -3,9 +3,10 @@ import {View, Text} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {color} from '../../utils/style-color';
 
-export const Button = ({text}) => {
+export const Button = ({text, onPress}) => {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={{
         backgroundColor: color.default,
         borderRadius: 25,
